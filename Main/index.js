@@ -12,27 +12,27 @@ const questions = [
     },
     {
         type: 'input',
-        message: 'Please write a short description of your project.',
+        message: 'Provide a short description explaining the what, why, and how of your project.',
         name: 'desc',
     },
     {
         type: 'input',
-        message: 'What command should be run to install dependencies?',
+        message: 'What are the steps required to install your project?',
         name: 'install',
     },
     {
         type: 'input',
-        message: 'What does the user need to know about using the repo?',
+        message: 'Provide instructions and examples for use.',
         name: 'usage',
     },
     {
         type: 'input',
-        message: 'What does the user need to know about contributing to the repo?',
+        message: 'Provide guidelines for how you would like other developers to contribute to your project.',
         name: 'contributing'
     },
     {
         type: 'input',
-        message: 'What command should be run to run tests?',
+        message: 'Provide examples on how to run tests for this project.',
         name: 'tests',
     },
     {
@@ -60,7 +60,7 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
-    inquirer.prompt(questions).then((response) => writeToFile("README.md", response));
+    inquirer.prompt(questions).then((response) => writeToFile("sampleREADME.md", response));
 }
 
 // Function call to initialize app
